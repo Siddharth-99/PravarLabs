@@ -68,7 +68,7 @@ export function Header() {
         <Link href="/" className="flex items-center gap-3">
           <Logo className="h-12 w-auto object-contain" />
           <span className="text-lg font-semibold text-foreground">
-            Pravar<span className="text-[#964734]">Ai</span>Lab
+            <span className="text-[#0FA4AF]">PravarAILab</span>
           </span>
         </Link>
 

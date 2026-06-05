@@ -56,7 +56,7 @@ export function FeaturesSection() {
             Features
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl text-balance">
-            Built for Enterprise Scale
+            <span style={{ color: "#003135" }}>Built for Enterprise Scale</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground text-pretty">
             Everything you need to deploy AI solutions at scale, with the security and reliability your business demands.

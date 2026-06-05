@@ -31,19 +31,20 @@ export function HeroSection() {
 
             {/* Headline */}
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance leading-[1.1]">
-              Transform Data Into{" "}
-              <span className="text-[#024950] relative">
+              <span className="text-[#003135]">
+                Transform Data Into{" "}
+              </span>
+              <span className="text-[#0FA4AF] relative">
                 Intelligent
                 <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 5.5C47 2 153 2 199 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="text-primary/40"/>
                 </svg>
               </span>{" "}
-              Decisions
+              <span className="text-[#003135]">Decisions</span> 
             </h1>
-
             {/* Subheadline */}
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground text-pretty">
-              PravarAi Labs builds advanced RAG systems, AI copilots, and enterprise automation that help organizations unlock the true value of their data.
+              PravarAI Labs builds advanced RAG systems, AI copilots, and enterprise automation that help organizations unlock the true value of their data.
             </p>
 
             {/* Quick benefits */}

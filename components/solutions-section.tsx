@@ -38,7 +38,7 @@ export function ServicesSection() {
             Services
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl text-balance">
-            AI-Powered Services for Modern Enterprises
+           <span className="text-[#003135]">AI-Powered Services for Modern Enterprises</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground text-pretty">
             Explore our core AI services, from RAG systems to enterprise automation and data integration.

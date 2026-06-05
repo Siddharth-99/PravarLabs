@@ -46,7 +46,7 @@ export function AboutSection() {
             About Us
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl text-balance">
-            Transforming Businesses Through AI
+           <span style={{ color: "#003135" }}> Transforming Businesses Through AI</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground text-pretty">
             At PravarAi Labs, we design scalable AI systems that integrate seamlessly with existing business tools, databases, and workflows.

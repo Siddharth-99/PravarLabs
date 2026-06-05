@@ -44,7 +44,7 @@ export function Footer() {
             <Link href="/" className="inline-flex items-center gap-3">
               <Logo width={120} height={40} className="h-10 w-auto object-contain" />
               <span className="text-lg font-semibold text-foreground">
-                Pravar<span className="text-[#964734]">Ai</span>Labs
+                <span className="text-[#0FA4AF]">PravarAILab</span>
               </span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-xs">
@@ -66,7 +66,9 @@ export function Footer() {
 
           {/* Links */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground">Services</h3>
+            <h3 className="text-sm font-semibold text-foreground">
+            <span className="text-[#003135]">Services</span>
+              </h3>
             <ul className="mt-4 space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
@@ -82,7 +84,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-foreground">Company</h3>
+            <h3 className="text-sm font-semibold text-foreground">
+              <span className="text-[#003135]">Company</span>
+            </h3>
             <ul className="mt-4 space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
@@ -98,7 +102,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-foreground">Resources</h3>
+            <h3 className="text-sm font-semibold text-foreground">
+              <span className="text-[#003135]">Resources</span>
+            </h3>
             <ul className="mt-4 space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
@@ -114,7 +120,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-foreground">Legal</h3>
+            <h3 className="text-sm font-semibold text-foreground">
+              <span className="text-[#003135]">Legal</span>
+            </h3>
             <ul className="mt-4 space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
