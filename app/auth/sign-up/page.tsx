@@ -3,7 +3,8 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
-import { createClient } from "@/lib/supabase/client"
+import { auth } from "@/lib/firebase/client"
+import { createUserWithEmailAndPassword, updateProfile, sendEmailVerification } from "firebase/auth"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -25,26 +26,18 @@ export default function SignUpPage() {
     setIsLoading(true)
     setError(null)
 
-    const supabase = createClient()
-    const { error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        emailRedirectTo: process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL || `${window.location.origin}/dashboard`,
-        data: {
-          full_name: fullName,
-          company: company,
-        },
-      },
-    })
-
-    if (error) {
-      setError(error.message)
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password)
+      await updateProfile(userCredential.user, {
+        displayName: fullName,
+      })
+      await sendEmailVerification(userCredential.user)
+      router.push("/auth/sign-up-success")
+    } catch (signUpError: any) {
+      setError(signUpError?.message || "Unable to create your account. Please try again.")
+    } finally {
       setIsLoading(false)
-      return
     }
-
-    router.push("/auth/sign-up-success")
   }
 
   const passwordRequirements = [

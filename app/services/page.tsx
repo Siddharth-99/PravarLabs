@@ -61,7 +61,7 @@ export default function ServicesPage() {
                   <h2 className="text-2xl font-bold text-foreground">{service.title}</h2>
                   <p className="text-muted-foreground leading-relaxed">{service.description}</p>
                   <Button size="lg" variant="outline" asChild>
-                    <Link href={service.href} className="inline-flex items-center gap-2">
+                    <Link href={service.href || "#"} className="inline-flex items-center gap-2">
                       View {service.title}
                     </Link>
                   </Button>

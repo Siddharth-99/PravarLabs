@@ -5,9 +5,9 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Logo } from "@/components/logo"
-import { createClient } from "@/lib/supabase/client"
+import { auth } from "@/lib/firebase/client"
+import { onAuthStateChanged, signOut as firebaseSignOut, type User } from "firebase/auth"
 import { Menu, X, LogOut, LayoutDashboard, ChevronDown } from "lucide-react"
-import type { User } from "@supabase/supabase-js"
 
 const navigation = [
   { name: "Features", href: "#features" },
@@ -45,28 +45,21 @@ export function Header() {
   const router = useRouter()
 
   useEffect(() => {
-    const supabase = createClient()
-    
-    const getUser = async () => {
-      const { data: { user } } = await supabase.auth.getUser()
-      setUser(user)
-      setLoading(false)
-    }
-    
-    getUser()
+    const currentUser = auth.currentUser
+    setUser(currentUser)
+    setLoading(false)
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event: any, session: any) => {
-      setUser(session?.user ?? null)
+    const unsubscribe = onAuthStateChanged(auth, (authUser) => {
+      setUser(authUser)
+      setLoading(false)
     })
 
-    return () => subscription.unsubscribe()
+    return unsubscribe
   }, [])
 
   const handleSignOut = async () => {
-    const supabase = createClient()
-    await supabase.auth.signOut()
+    await firebaseSignOut(auth)
     router.push("/")
-    router.refresh()
   }
 
   return (
@@ -93,7 +86,7 @@ export function Header() {
               {servicesMenu.map((item) => (
                 <Link
                   key={item.name}
-                  href={item.href}
+                  href={item.href || "#"}
                   className="block rounded-2xl px-4 py-3 text-sm text-foreground hover:bg-primary/10 transition-colors"
                 >
                   <div className="font-semibold">{item.name}</div>
@@ -105,7 +98,7 @@ export function Header() {
           {navigation.map((item) => (
             <Link
               key={item.name}
-              href={item.href}
+              href={item.href || "#"}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               {item.name}
@@ -172,7 +165,7 @@ export function Header() {
             {servicesMenu.map((item) => (
               <Link
                 key={item.name}
-                href={item.href}
+                href={item.href || "#"}
                 className="block pl-4 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -182,7 +175,7 @@ export function Header() {
             {navigation.map((item) => (
               <Link
                 key={item.name}
-                href={item.href}
+                href={item.href || "#"}
                 className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
