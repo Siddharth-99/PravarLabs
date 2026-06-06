@@ -5,25 +5,21 @@ import { Button } from "@/components/ui/button"
 const services = [
   {
     title: "RAG Systems",
-    description: "Build knowledge-aware AI systems that combine your enterprise data with powerful language models.",
     href: "/services/rag-system",
     image: "/images/features/rag-technology.jpg",
   },
   {
     title: "AI Copilots",
-    description: "Deploy intelligent copilots to automate workflows, boost productivity, and support your team in real time.",
     href: "/services/ai-copilots",
     image: "/images/features/ai-copilot.jpg",
   },
   {
     title: "Enterprise AI",
-    description: "Scale AI across your organization with secure, reliable enterprise-grade automation and insights.",
     href: "/services/enterprise-ai",
     image: "/images/features/enterprise-automation.jpg",
   },
   {
     title: "Data Integration",
-    description: "Connect your systems and unify your data to create a strong foundation for AI and analytics.",
     href: "/services/data-integration",
     image: "/images/features/data-integration.jpg",
   },
@@ -59,9 +55,8 @@ export default function ServicesPage() {
                 </div>
                 <div className="space-y-4 p-8">
                   <h2 className="text-2xl font-bold text-foreground">{service.title}</h2>
-                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
                   <Button size="lg" variant="outline" asChild>
-                    <Link href={service.href || "#"} className="inline-flex items-center gap-2">
+                    <Link href={service.href?.trim() || "#"} className="inline-flex items-center gap-2">
                       View {service.title}
                     </Link>
                   </Button>

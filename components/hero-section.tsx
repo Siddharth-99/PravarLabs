@@ -19,7 +19,7 @@ export function HeroSection() {
             {/* Badge */}
             <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary border border-primary/20">
               <Sparkles className="h-4 w-4 " />
-              <span style={{ color: "#964734" }}>
+              <span style={{ color: "#0FA4AF" }}>
                 Enterprise AI Solutions</span>
             </div>
 
@@ -44,7 +44,7 @@ export function HeroSection() {
             </h1>
             {/* Subheadline */}
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground text-pretty">
-              PravarAI Labs builds advanced RAG systems, AI copilots, and enterprise automation that help organizations unlock the true value of their data.
+              Pravar AI Labs builds advanced RAG systems, AI copilots, and enterprise automation that help organizations unlock the true value of their data.
             </p>
 
             {/* Quick benefits */}

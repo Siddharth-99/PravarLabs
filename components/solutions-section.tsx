@@ -35,7 +35,7 @@ export function ServicesSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary border border-primary/20 mb-4">
-            Services
+           <span style={{ color: "#003135", fontWeight: "bold" }}>Services</span>
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl text-balance">
            <span className="text-[#003135]">AI-Powered Services for Modern Enterprises</span>

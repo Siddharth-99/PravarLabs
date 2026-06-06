@@ -41,10 +41,10 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
           {/* Brand */}
           <div className="col-span-2">
-            <Link href="/" className="inline-flex items-center gap-3">
+            <Link href="/" className="inline-flex items-center gap-1">
               <Logo width={120} height={40} className="h-10 w-auto object-contain" />
               <span className="text-lg font-semibold text-foreground">
-                <span className="text-[#0FA4AF]">PravarAILab</span>
+                <span className="text-[#0FA4AF]">PRAVAR AI LABS</span>
               </span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-xs">
@@ -54,7 +54,7 @@ export function Footer() {
               {socialLinks.map((social) => (
                 <Link
                   key={social.name}
-                  href={social.href || "#"}
+                  href={social.href?.trim() || "#"}
                   className="w-9 h-9 rounded-full bg-background border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors"
                   aria-label={social.name}
                 >
@@ -73,7 +73,7 @@ export function Footer() {
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link
-                    href={link.href || "#"}
+                    href={link.href?.trim() || "#"}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.name}
@@ -91,7 +91,7 @@ export function Footer() {
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
-                    href={link.href || "#"}
+                    href={link.href?.trim() || "#"}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.name}
@@ -109,7 +109,7 @@ export function Footer() {
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link
-                    href={link.href || "#"}
+                    href={link.href?.trim() || "#"}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.name}
@@ -127,7 +127,7 @@ export function Footer() {
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
                   <Link
-                    href={link.href || "#"}
+                    href={link.href?.trim() || "#"}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.name}
@@ -152,7 +152,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-12 border-t border-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} PravarAiLabs. All rights reserved.
+            &copy; {new Date().getFullYear()} PRAVAR AI LABS. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
             <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>

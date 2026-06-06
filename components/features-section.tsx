@@ -4,11 +4,7 @@ import { Check } from "lucide-react"
 const features = [
  {
   image: "/images/features/scalable-architecture.jpg",
-  title: (
-    <span style={{ color: "#024950", fontWeight: "bold" }}>
-      Scalable Architecture
-    </span>
-  ),
+  title: "Scalable Architecture",
   description:
     "Our AI systems are designed to scale with your business, handling millions of queries without compromising performance.",
   highlights: [
@@ -19,11 +15,7 @@ const features = [
 },
   {
     image: "/images/features/seamless-integration.jpg",
-    title: (
-    <span style={{ color: "#024950", fontWeight: "bold" }}>
-      Seamless Integration
-    </span>
-  ),
+    title: "Seamless Integration",
     description: "Connect with your existing business tools, databases, and workflows without disrupting your operations.",
     highlights: [
       "200+ pre-built integrations",
@@ -33,11 +25,7 @@ const features = [
   },
   {
     image: "/images/features/enterprise-security.jpg",
-    title: (
-    <span style={{ color: "#024950", fontWeight: "bold" }}>
-      Enterprise Security
-    </span>
-  ),
+    title: "Enterprise Security",
     description: "Bank-grade security measures to protect your sensitive data and ensure compliance with industry standards.",
     highlights: [
       "SOC 2 Type II certified",
@@ -53,7 +41,7 @@ export function FeaturesSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary border border-primary/20 mb-4">
-            Features
+            <span style={{ color: "#003135", fontWeight: "bold" }}>Features</span>
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl lg:text-5xl text-balance">
             <span style={{ color: "#003135" }}>Built for Enterprise Scale</span>
@@ -88,7 +76,9 @@ export function FeaturesSection() {
                 {/* Content */}
                 <div className="flex-1">
                   <h3 className="text-2xl lg:text-3xl font-bold text-foreground">
-                    {feature.title}
+                    <span style={{ color: "#024950", fontWeight: "bold" }}>
+                      {feature.title}
+                    </span>
                   </h3>
                   <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
                     {feature.description}

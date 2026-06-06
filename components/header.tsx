@@ -65,10 +65,10 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-1">
           <Logo className="h-12 w-auto object-contain" />
           <span className="text-lg font-semibold text-foreground">
-            <span className="text-[#0FA4AF]">PravarAILab</span>
+            <span className="text-[#0FA4AF]">PRAVAR AI LABS</span>
           </span>
         </Link>
 
@@ -82,15 +82,14 @@ export function Header() {
               Services
               <ChevronDown className="h-4 w-4" />
             </button>
-            <div className="invisible absolute left-0 top-full z-50 mt-2 w-[300px] space-y-2 rounded-3xl border border-border/50 bg-background p-4 shadow-2xl transition duration-200 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 opacity-0 translate-y-2">
+            <div className="invisible absolute left-0 top-full z-50 mt-2 w-[240px] space-y-2 rounded-3xl border border-border/50 bg-background p-3 shadow-2xl transition duration-200 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 opacity-0 translate-y-2">
               {servicesMenu.map((item) => (
                 <Link
                   key={item.name}
-                  href={item.href || "#"}
-                  className="block rounded-2xl px-4 py-3 text-sm text-foreground hover:bg-primary/10 transition-colors"
+                  href={item.href?.trim() || "#"}
+                  className="block rounded-2xl px-3 py-2 text-sm text-foreground hover:bg-primary/10 transition-colors"
                 >
                   <div className="font-semibold">{item.name}</div>
-                  <p className="text-xs text-muted-foreground mt-1">{item.description}</p>
                 </Link>
               ))}
             </div>
@@ -98,8 +97,8 @@ export function Header() {
           {navigation.map((item) => (
             <Link
               key={item.name}
-              href={item.href || "#"}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              href={item.href?.trim() || "#"}
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               {item.name}
             </Link>
@@ -165,7 +164,7 @@ export function Header() {
             {servicesMenu.map((item) => (
               <Link
                 key={item.name}
-                href={item.href || "#"}
+                href={item.href?.trim() || "#"}
                 className="block pl-4 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -175,7 +174,7 @@ export function Header() {
             {navigation.map((item) => (
               <Link
                 key={item.name}
-                href={item.href || "#"}
+                href={item.href?.trim() || "#"}
                 className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
