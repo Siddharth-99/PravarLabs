@@ -11,10 +11,10 @@ export default function DataIntegrationPage() {
           <div className="grid gap-16 lg:grid-cols-[1.1fr_0.9fr] items-center">
             <div>
               <span className="inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary border border-primary/20">
-                Data Integration
+               <span className="text-[#003135] text-bold"> Data Integration</span>
               </span>
               <h1 className="mt-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-                Connect your data and power AI with one platform.
+               <span className="text-[#003135]">Unify and prepare your data for smarter AI and analytics.</span>
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-8">
                 Our Data Integration service unifies your sources, cleanses data, and prepares a single source of truth for smarter AI and analytics.

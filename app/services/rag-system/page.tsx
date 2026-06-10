@@ -11,10 +11,10 @@ export default function RAGSystemPage() {
           <div className="grid gap-16 lg:grid-cols-[1.1fr_0.9fr] items-center">
             <div>
               <span className="inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary border border-primary/20">
-                RAG Systems
+               <span className="text-[#003135] text-bold"> RAG Systems</span>
               </span>
               <h1 className="mt-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-                Build smarter AI with your own knowledge base.
+                <span className="text-[#003135]">Build smarter AI with your own knowledge base.</span>
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-8">
                 Our Retrieval-Augmented Generation service connects your documents, data, and knowledge sources to an advanced AI model so every answer is accurate, contextual, and business-ready.

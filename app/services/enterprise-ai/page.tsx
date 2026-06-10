@@ -11,10 +11,10 @@ export default function EnterpriseAIPage() {
           <div className="grid gap-16 lg:grid-cols-[1.1fr_0.9fr] items-center">
             <div>
               <span className="inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary border border-primary/20">
-                Enterprise AI
+               <span className="text-[#003135] text-bold"> Enterprise AI</span>
               </span>
               <h1 className="mt-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-                Scale AI across your organization.
+               <span className="text-[#003135]">Integrate intelligent automation across your enterprise.</span>
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-8">
                 Our Enterprise AI service helps you integrate intelligent automation, decision support, and data-driven workflows across teams and systems.

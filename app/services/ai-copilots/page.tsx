@@ -11,10 +11,11 @@ export default function AICopilotsPage() {
           <div className="grid gap-16 lg:grid-cols-[1.1fr_0.9fr] items-center">
             <div>
               <span className="inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary border border-primary/20">
-                AI Copilots
+              
+              <span className="text-[#003135] text-bold"> AI Copilots</span>
               </span>
               <h1 className="mt-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-                Give your team a modern AI copilot.
+               <span className="text-[#003135]">Deliver intelligent assistance and automation across your organization.</span>
               </h1>
               <p className="mt-6 text-lg text-muted-foreground leading-8">
                 Our AI Copilot service delivers intelligent automation, context-aware assistance, and workflow acceleration for every department in your organization.
